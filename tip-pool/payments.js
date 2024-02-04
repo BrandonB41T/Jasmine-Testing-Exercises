@@ -22,7 +22,7 @@ function submitPaymentInfo(evt) {
     allPayments['payment' + paymentId] = curPayment;
 
     appendPaymentTable(curPayment);
-    updateServerTable();
+    updateServerTable(); // function from servers.js
     updateSummary();
 
     billAmtInput.value = '';
