@@ -24,3 +24,17 @@ function appendTd(tr, value) {
 
   tr.append(newTd);
 }
+
+
+function appendDeleteBtn(tr) {
+  let newTd = document.createElement('td');
+  newTd.innerText = "X";
+  newTd.style.cursor = "pointer";
+  newTd.style.color = "crimson";
+
+  newTd.addEventListener("click", function () {
+    newTd.parentElement.remove();
+  })
+
+  tr.append(newTd);
+}

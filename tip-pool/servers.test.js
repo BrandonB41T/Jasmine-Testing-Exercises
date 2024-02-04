@@ -22,9 +22,10 @@ describe("Servers test (with setup and tear-down)", function() {
     submitServerInfo();
 
     let tds = document.querySelectorAll('#serverTable tbody tr td');
-    expect(tds.length).toEqual(2);
+    expect(tds.length).toEqual(3);
     expect(tds[0].innerText).not.toEqual('');
     expect(tds[1].innerText).not.toEqual('');
+    expect(tds[2].innerText).not.toEqual('');
   })
 
   afterEach(function() {

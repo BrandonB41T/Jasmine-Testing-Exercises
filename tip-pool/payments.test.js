@@ -42,7 +42,6 @@ describe('Payments tests', function () {
         expect(summaryTds[2].innerText).not.toBe('');
     })
 
-
     afterEach(function() {
         billAmtInput.value = '';
         tipAmtInput.value = '';

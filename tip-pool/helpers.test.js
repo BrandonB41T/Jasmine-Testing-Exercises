@@ -23,6 +23,15 @@ describe("Helper function tests", function() {
         expect(tr.innerText).toEqual("new td");
     })
 
+
+
+    it('should append delete button to parent tr on appendDeleteButton()', function () {
+        serverNameInput.value = 'John';
+        submitServerInfo();
+        let tr = document.querySelectorAll("#serverTable tbody tr");
+        expect(tr[0].innerText).toContain("X");
+    })
+
     afterEach(function () {
         billAmtInput.value = '';
         tipAmtInput.value = '';
@@ -32,5 +41,7 @@ describe("Helper function tests", function() {
         summaryTds[0].innerHTML = '';
         summaryTds[1].innerHTML = '';
         summaryTds[2].innerHTML = '';
+        allServers = {};
+        serverId = 0;
     })
 })
