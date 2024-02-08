@@ -15,4 +15,3 @@ describe("calculateMonthlyPayment() tests", function() {
   
   /// etc
 })
-
