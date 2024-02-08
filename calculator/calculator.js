@@ -44,6 +44,10 @@ function update() {
   if (amount === ''  ||  amount === '0') return;
   if (years === ''  ||  years === '0') return;
   if (rate === ''  ||  rate === '.00') return;
+  if (amount.indexOf(',') !== -1) {
+    alert("Please do not use commas");
+    return;
+  }
 
   let monthlyPayment = calculateMonthlyPayment(Number(amount), Number(years), Number(rate));
 
